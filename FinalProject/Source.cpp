@@ -5,9 +5,9 @@
 int main(int argc, char** argv)
 {
 
-	Label l("Hello World");
-	Control& l2 = l;
+	//Label l("Hello World");
+	/*Control& l2 = l;
 	EventEngine e;
-	e.run(l);
+	e.run(l);*/
 
 }
