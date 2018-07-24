@@ -7,6 +7,9 @@ Control::Control()
 }
 
 
+void Control::left() { int x; };
+
+
 Control::~Control()
 {
 }
