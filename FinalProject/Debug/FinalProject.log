@@ -1,5 +1,5 @@
-﻿  Source.cpp
+﻿  panel.cpp
   TextBox.cpp
-c:\users\roi shmueli\desktop\finalprojectmethodse\finalproject\finalproject\textbox.cpp(11): error C2084: function 'void TextBox::draw(Graphics &,int,int,::size_t)' already has a body
-  c:\users\roi shmueli\desktop\finalprojectmethodse\finalproject\finalproject\textbox.h(11): note: see previous definition of 'draw'
   Generating Code...
+  FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.exe
+  FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.pdb (Partial PDB)

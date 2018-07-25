@@ -2,14 +2,13 @@
 
 
 
-TextBox::TextBox(int width, int height)
-{
-	this->width = width;
-	this->height = height;
-}
 
-void TextBox::draw(Graphics& g, int x, int y, size_t z) {
-	
+TextBox::TextBox(int left, int bottom, int width,  int height)
+{
+	Graphics g; 
+	g.setBackground(Color::Black);
+	g.setForeground(Color::Red);
+	Control::draw(g, left, bottom, width, height, Border::doubleline);
 }
 
 TextBox::~TextBox()
