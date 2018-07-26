@@ -11,7 +11,7 @@
 panel::panel(int x, int y, int width , int height)
 {
 
-	Graphics g; TextBox t(10, 7, 10, 5);
+	Graphics g;
 	g.setBackground(Color::Black);
 	g.setForeground(Color::White);
 	Control::draw(g, x, y, width, height, Border::doubleline);

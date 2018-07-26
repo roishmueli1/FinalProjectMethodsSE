@@ -1,5 +1,6 @@
-﻿  panel.cpp
-  TextBox.cpp
-  Generating Code...
+﻿  Source.cpp
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(17): warning C4101: 'MouseWhere': unreferenced local variable
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(16): warning C4101: 'KeyWhere': unreferenced local variable
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(18): warning C4101: 'EndWhere': unreferenced local variable
   FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.exe
   FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.pdb (Partial PDB)

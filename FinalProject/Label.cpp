@@ -1,23 +1,22 @@
 #include "Label.h"
+#include "../Common/Graphics.h"
+#include "../Common/Control.h"
 #include <iostream>
 
 
 using namespace std;
 
-void Label::draw(Graphics& g, int x, int y)
+Label::Label(int left, int bottom, int width, int height)
 {
-	g.moveTo(x, y);
-	//draw frame to label.
-	for (int i = 0; i < 10; i++)
-	{
-		cout << "=";
-	}
+
+	Graphics g;
+	g.setBackground(Color::Black);
+	g.setForeground(Color::Red);
+	g.write(left, bottom - 1,"Label:");
+	Control::draw(g, left, bottom, width, height, Border::oneLine);
+
 }
 
-Label::Label(string s)
-{
-	cout << s << endl;
-}
 
 
 Label::~Label()
