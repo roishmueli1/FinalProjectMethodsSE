@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿  Control.cpp
   EventEngine.cpp
   Generating Code...
   Common.vcxproj -> C:\Users\Roi Shmueli\Desktop\FinalProjectMethodSE\FinalProject\Debug\Common.lib
+=======
+﻿  EventEngine.cpp
+  Common.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\Common.lib
+>>>>>>> 59674a39102ec9b8cc1d01b1322ed7378ef9814b

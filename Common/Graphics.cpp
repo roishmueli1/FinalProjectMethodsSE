@@ -1,7 +1,8 @@
 #include "Graphics.h"
+#include <Windows.h>
 
 Graphics::Graphics(DWORD stdHandle)
-	: _console(GetStdHandle(stdHandle)), _background(Color::Black), _foreground(Color::White)
+	:stin(GetStdHandle(STD_INPUT_HANDLE)), _console(GetStdHandle(stdHandle)), _background(Color::Blue), _foreground(Color::White)
 {
 	updateConsoleAttributes();
 }
@@ -39,6 +40,12 @@ void Graphics::setForeground(Color color)
 void Graphics::write(string s)
 {
 	WriteConsoleA(_console, s.c_str(), s.size(), nullptr, nullptr);
+}
+void Graphics::Dwrite(DWORD d)
+{
+	GetConsoleMode(stin, &d);
+	//_console = d &
+	//	~(ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT);
 }
 
 void Graphics::write(wstring s)

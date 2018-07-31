@@ -1,5 +1,6 @@
 ﻿  Source.cpp
-  TextBox.cpp
-c:\users\roi shmueli\desktop\finalprojectmethodse\finalproject\finalproject\textbox.cpp(11): error C2084: function 'void TextBox::draw(Graphics &,int,int,::size_t)' already has a body
-  c:\users\roi shmueli\desktop\finalprojectmethodse\finalproject\finalproject\textbox.h(11): note: see previous definition of 'draw'
-  Generating Code...
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(17): warning C4101: 'MouseWhere': unreferenced local variable
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(16): warning C4101: 'KeyWhere': unreferenced local variable
+c:\users\hallumi\desktop\engineering methods\finalprojectmethodsse\finalproject\source.cpp(18): warning C4101: 'EndWhere': unreferenced local variable
+  FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.exe
+  FinalProject.vcxproj -> C:\Users\hallumi\Desktop\engineering methods\FinalProjectMethodsSE\Debug\FinalProject.pdb (Partial PDB)

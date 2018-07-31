@@ -1,19 +1,24 @@
 #pragma once
 #include <string>
 #include "../Common/Control.h"
+#include "../Common/Graphics.h"
 
 class TextBox : public Control
 {
+
+private:
+	int width, height;
+	int left, bottom;
+
 public:
-	TextBox(int width, int height);
+
+	TextBox(int left, int bottom, int width, int height) ;
+	
 
 
-	virtual void draw(Graphics& g, int x, int y, size_t z) {};
-	//Setters
-	//void setText(string);
+	//void draw(int left, int bottom,  int width, int height);
 
-	//getters
-	//string getText();
+	
 	~TextBox();
 };
 

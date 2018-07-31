@@ -1,6 +1,8 @@
 #include "EventEngine.h"
 #include <vector>
 #include <algorithm>
+#include <iostream>
+
 using namespace std;
 
 EventEngine::EventEngine(DWORD input, DWORD output)
@@ -12,18 +14,9 @@ EventEngine::EventEngine(DWORD input, DWORD output)
 
 void EventEngine::run(Control &c)
 {
-	for (bool redraw = true;;)
+	while(true)
 	{
-		if (redraw)
-		{
-			_graphics.clearScreen();
-			_graphics.setCursorVisibility(false);
-			for (size_t z = 0; z < 5; ++z)
-			{
-				c.draw(_graphics, 0, 0, z);
-			}	
-			redraw = false;
-		}
+		
 
 		INPUT_RECORD record;
 		DWORD count;
@@ -41,12 +34,13 @@ void EventEngine::run(Control &c)
 					moveFocus(c, f);
 				else
 					f->keyDown(code, chr);
-				redraw = true;
+				
 			}
 			break;
 		}
 		case MOUSE_EVENT:
 		{
+			Graphics Gr; string s;
 			auto button = record.Event.MouseEvent.dwButtonState;
 			auto coord = record.Event.MouseEvent.dwMousePosition;
 			auto x = coord.X - c.getLeft();
@@ -54,7 +48,13 @@ void EventEngine::run(Control &c)
 			if (button == FROM_LEFT_1ST_BUTTON_PRESSED || button == RIGHTMOST_BUTTON_PRESSED)
 			{
 				c.mousePressed(x, y, button == FROM_LEFT_1ST_BUTTON_PRESSED);
-				redraw = true;
+				//cout << x << ", " << y;
+			}
+			if (x >= 11 && x < 90 && y > 28 && y <35 && button == FROM_LEFT_1ST_BUTTON_PRESSED || button == RIGHTMOST_BUTTON_PRESSED)
+			{
+				Gr.moveTo(11, 29);
+				cin >> s;
+
 			}
 			break;
 		}

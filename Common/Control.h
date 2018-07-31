@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum Border { None, SingleLine, DoubleLine};
+enum class Border { doubleline, oneLine, noLine };
 
 class Control
 {
@@ -12,39 +12,26 @@ class Control
 protected:
 	short left;
 	short top;
-	Color background;
-	Color foreground;
-	int width;
-	int height;
+	string text;
 	
 public:
-
-	//Setters
-	void setPosition(COORD c);
-	void setBackground(Color color);
-	void setForeground(Color color);
-	Color getBackground();
-	Color getForeground();
-
-	//Getters
-
-	COORD getPosition();
-
-
 	Control();
+
+
 	static Control* getFocus() { return NULL; };
 	static void setFocus(Control& control) {};
-	
-	
-
-	virtual void draw(Graphics& g, int x, int y, size_t z) {};
-	virtual void mousePressed(int x, int y, bool isLeft) {};
+	virtual void draw(Graphics& g, int x, int y, int width, int height, Border border);
+	virtual void mousePressed(int x, int y, bool isLeft);
 	virtual void keyDown(int keyCode, char charecter) {};
 	virtual short getLeft() { return 0; };
 	virtual short getTop() { return 0; };
 	virtual void getAllControls(vector<Control*>* controls) {};
 	virtual bool canGetFocus() { return FALSE; };
-	virtual bool myPureFunction() = 0;
+	virtual string getString() { return text; }
+	virtual void setString(string _text) { this->text = _text; }
+	virtual string writeInText(string _s);
+	
+	//virtual bool myPureFunction() = 0;
 	~Control();
 };
 

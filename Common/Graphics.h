@@ -18,12 +18,17 @@ public:
 	void write(string s);
 	void write(int x, int y, string s);
 	void write(wstring s);
+	void Dwrite(DWORD d);
 	void write(int x, int y, wstring s);
 	void setCursorVisibility(bool isVisible);
-private:
-	HANDLE _console;
-	Color _background, _foreground;
+	void setStringG(string _s) { this->s = _s;}
+	string getStringG() { return s; }
 
+private:
+	HANDLE _console, stin;
+	Color _background, _foreground;
+	DWORD d;
+	string s;
 	void updateConsoleAttributes();
 };
 
