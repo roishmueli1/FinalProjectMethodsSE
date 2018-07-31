@@ -4,14 +4,33 @@
 
 using namespace std;
 
+enum Border { None, SingleLine, DoubleLine};
+
 class Control
 {
 
 protected:
 	short left;
 	short top;
+	Color background;
+	Color foreground;
+	int width;
+	int height;
 	
 public:
+
+	//Setters
+	void setPosition(COORD c);
+	void setBackground(Color color);
+	void setForeground(Color color);
+	Color getBackground();
+	Color getForeground();
+
+	//Getters
+
+	COORD getPosition();
+
+
 	Control();
 	static Control* getFocus() { return NULL; };
 	static void setFocus(Control& control) {};
